@@ -65,6 +65,7 @@ if (isset($_GET['code'])) { // we are returning back from LinkedIn with the code
             
             $emailInfo = $email = $client->get('emailAddress', ['q' => 'members', 'projection' => '(elements*(handle~))']);
             pp($emailInfo);
+            print_r($emailInfo);
 
             $share = $client->post(                 
                 'ugcPosts',                         
